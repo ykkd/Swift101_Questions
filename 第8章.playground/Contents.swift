@@ -23,9 +23,9 @@ import Foundation
 /*
  新しい列挙型「ShapeType」を定義し、その中に「circle」「rectangle」「triangle」というケースを追加してください。
  以下の通り、それぞれのケースに対応する連想値を持たせてください。
- circle（円）は半径、rectangle（四角形）は幅と高さ、triangle（三角形）は底辺と高さ。
+ circle（円）は半径を表すDouble型、rectangle（四角形）は幅と高さを表すDouble型の変数二つ、triangle（三角形）は底辺と高さを表すDouble型の変数二つ。
 
- 列挙型「ShapeType」に、各形状の面積を計算して返すメソッド「area」を追加してください。
+ 列挙型「ShapeType」に、各形状の面積を計算してDouble型の値を返すメソッド「area」を追加してください。
  */
 
 // 列挙型「ShapeType」を活用して、半径の値が34の円の面積を出力してください
