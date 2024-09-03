@@ -34,8 +34,9 @@ import Foundation
 
 // ??演算子（Nil Coalescing演算子）を使用して、変数「optional」の値を取り出し、nilの場合は0を代入してください。結果を変数「intValue」に代入してコンソールに出力してください。
 
-// 強制アンラップを使用して、変数「optionalInt」の値を取り出し、コンソールに出力してください。
+// 強制アンラップを使用して、変数「optionalInteger」の値を取り出し、コンソールに出力してください。
 
 // OptionalなString型の変数「optionalString」を宣言し、"Hello"を代入してください。
 
-// オプショナルチェーン（Optional Chaining）を使用して、変数「optionalString」の長さをコンソールに出力してください。optionalStringがnilの場合はnilを出力してください。
+// オプショナルチェーン（Optional Chaining）を使用して、変数「optionalString」の長さをコンソールに出力してください。ただし、optionalStringがnilの場合は、長さではなく"変数はnilです"というテキストを出力してください。
+
