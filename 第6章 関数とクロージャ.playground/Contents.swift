@@ -12,12 +12,6 @@ import Foundation
 
 // 定数「product」を宣言し、「multiply」クロージャを使って4と7の積を代入してください。最後に定数「product」の内容を出力してください。
 
-// 省略形の引数を使って、2つの整数の差を計算するクロージャ「subtract」を定義してください。
+// 2つの整数の差を計算するクロージャ「subtract」を定義してください。ただし、最初の引数をfirstNumber,2つ目の引数をsecondNumberとして定義し、fisrtNumberからsecoundNumberを引くクロージャとして定義してください。
 
 // 変数「difference」を宣言し、「subtract」クロージャを使って9から3を引いた差を代入してください。
-
-// 関数「incrementer」を定義し、引数に整数nを取り、整数を返すクロージャを返してください。そのクロージャは、引数に与えられた整数にnを足した値を返すようにしてください。
-
-// 定数「incrementBy2」を宣言し、「incrementer」関数を使って2を足すクロージャを代入してください。
-
-// 定数「incrementedValue」を宣言し、「incrementBy2」クロージャを使って3に2を足した値を代入してください。
