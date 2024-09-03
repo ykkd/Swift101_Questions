@@ -1,6 +1,6 @@
 import Foundation
 
-// 新しい構造体「Person」を定義し、その中に「name」というオプショナル型のプロパティを追加してください。
+// 新しい構造体「Person」を定義し、その中に「name」というオプショナル型のプロパティを定数として追加してください。
 
 // 配列peopleを宣言し、それぞれnameが「John」「Jane」であるPersonクラスのインスタンスの配列を代入してください。
 
@@ -11,16 +11,20 @@ import Foundation
  Johnが存在する場合「Johnは存在します」と出力し、存在しない場合は「人物が見つかりません」と出力してください。
  */
 
-// Errorプロトコルに準拠した新しい列挙型「FileError」を定義し、「notFound」「permissionDenied」「unknown」というケースを追加してください。
+// Error型に準拠した新しい列挙型「UserError」を定義し、「userNotFound」というケースを追加してください。
 
-// 関数「readFile(path:)」を定義し、その中でFileError型のエラーをthrowするようにしてください。この関数は文字列であるファイルパスを受け取ります。pathが「not_found」である場合は「notFound」エラーを、「no_permission」である場合は「permissionDenied」エラーを、それ以外のエラーの場合は「unknown」エラーをthrowしてください。
+/*
+ 新たな関数「findPersonThrows」を定義してください。この関数は、findPerson(name:)同様、引数にString型のnameを取ります。
+ この関数は、引数に与えられた値と一致する名前を持つPersonクラスのインスタンスが配列peopleの中に存在する場合、該当のPersonクラスのインスタンスを返却します。存在しない場合はUserError.userNotFound を返却します。
+ */
 
-// do-catch文を使用して、「readFile(path:)」関数を呼び出し、エラーを処理してください。エラーの内容に応じて適切なメッセージを出力してください。
+// do-catch文を使用して、「findPersonThrows」関数を呼び出し、Yamatoという名前のPersonを探してください。見つかった場合は名前を、見つからない場合はエラー内容を出力してください。
 
-// 新しい構造体「User」を定義し、その中に「id」と「name」というプロパティを追加してください。
 
-// 新しい列挙型「UserError」を定義し、「userNotFound」「invalidUserId」というケースを追加してください。
+/*
+ 新たな関数「findPersonResult」を定義してください。この関数は、findPerson(name:)同様、引数にString型のnameを取ります。
+ この関数は、Result型を返却します。引数に与えられた値と一致する名前を持つPersonクラスのインスタンスが配列peopleの中に存在する場合、該当のPersonクラスのインスタンスを、存在しない場合はUserError.userNotFound を返却します。
+ */
 
-// 関数「findUser(byId:)」を定義し、指定されたIDのユーザー情報を検索してください。ユーザーが見つかった場合にはResult型でUserオブジェクトを返し、見つからなかった場合にはUserError.userNotFoundエラーを返してください。
 
-// findUser(byId:)関数を使用して、ユーザー情報の検索結果をコンソールに出力してください。エラーが発生した場合には、適切なエラーメッセージを出力してください。
+// 「findPersonResult」関数を呼び出し、Yamatoという名前のPersonを探してください。見つかった場合は名前を、見つからない場合はエラー内容を出力してください。
