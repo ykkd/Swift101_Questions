@@ -31,9 +31,6 @@ import Foundation
 /*
  構造体「Rectangle」を定義し、その中に「width」と「height」というDouble型のプロパティを定数として追加してください。
  構造体「Rectangle」に、面積を計算する計算型プロパティ「area」を追加してください。Rectangleは長方形という意味です。
- 
- さらに、定数rectを作成し、Rectangle型のインスタンスを代入してください。縦横それぞれ「10」を指定してください。
- 定数rectの面積を出力してください
  */
 
 
