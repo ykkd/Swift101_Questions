@@ -1,22 +1,24 @@
 import UIKit
 
-// Any型の変数「anyValue」を宣言し、"Hello"という文字列を代入してください。
+// Any型の変数「anyValue」を宣言し、"総復習"という文字列を代入してください。
 
-// 変数「anyValue」をオプショナルバインディングを用いてString型としてキャストし、その値を変数「stringValue」に代入してください。キャストに失敗した場合は「キャストに失敗しました」と出力するコードを書いてください。
+/*
+ 変数「anyValue」をオプショナルバインディングを用いてString型としてキャストし、その値を変数「stringValue」に代入してください。キャストに失敗した場合は「キャストに失敗しました」と出力するコードを書いてください。
+ */
 
-// 変数「age」を宣言し、18を代入してください。引数なしの関数「checkAge」を宣言してください。関数内で、guard文を使用して、ageが20以上でなければ「年齢制限があります」と出力し、20以上であれば「ようこそ」と出力してください。最後に、checkAge関数を実行してください。
+// 変数「age」を宣言し、26を代入してください。引数なしの関数「checkAge」を宣言してください。関数内で、ageが20以上でなければ「年齢制限があります」と出力し、20以上であれば「ようこそ」と出力してください。最後に、checkAge関数を実行してください。
 
 /*
  引数なし、返り値なしのクロージャを引数に取る関数「greetAndDoSomething」を定義しなさい。引数名は「completion」にしなさい
  関数内では以下処理を順に行いなさい。
- - "Hello"という文字列を出力する
+ - "Goodbye"という文字列を出力する
  - completionを実行しなさい
  */
 
 /*
- greetAndDoSomething関数を用いて、以下が出力しなさい
- "Hello"
- "What's up?"
+ greetAndDoSomething関数を用いて、以下を出力しなさい
+ "Goodbye"
+ "See you soon!"
  */
 
 /*
@@ -60,6 +62,30 @@ import UIKit
  - vc.setupTableView()を実行することで、セルの個数とその中身が適切に出力される。その際、セルに個数は10個に指定してください。
  */
 
+protocol UITableViewDataSource: AnyObject {
+    func numberOfRows() -> Int
+}
+
+class UITableView {
+    
+    private var cells: [Int] = []
+    
+    func createCells() {
+        print("cellを\(cells.count)個作成しました。 cells: \(cells)")
+    }
+}
+
+class MyViewController {
+    
+    private let tableView = UITableView()
+    
+    init() {}
+    
+    func setupTableView() {}
+}
+
+let vc = MyViewController()
+vc.setupTableView()
 
 /*
  新しい構造体「User」を定義し、その中に「id」と「name」というプロパティを追加してください。
@@ -69,7 +95,6 @@ import UIKit
 /*
  エラー型に準拠した新しい列挙型FetchUserErrorを定義してください。
  ケースは後続の問題を解く際に、必要なもの考えて、随時追加してください。
- -
  */
 
 /*
@@ -93,3 +118,24 @@ import UIKit
  */
 
 
+/*
+ [チャレンジ問題]
+ Xcodeのメニュー 「File>New>Playground」を選択し、Playgroud(Blankページ)を新規作成してください。
+ ページ名は「AccountingApplication」にしてください
+ 新規作成したページに「BankAccount」クラスをコピー＆ペーストしてください。
+ 
+ AccountingApplicationクラスはMoneyForwardやFreeeのように、複数の銀行口座の残高を集計するためのオブジェクトである。
+ 複数のBankAccountクラスのインスタンスが存在する際に、いずれかの口座残高（balance)プロパティが更新される度に、それらの口座残高の合計額を出力するオブジェクトを実装してください。
+ 
+ 例えば、以下のような処理を行った際にbankAccountAとbankAccountBのbalanceの和が出力するものである。
+ - myAccountingApplication(AccountingApplicationクラスのインスタンス)を生成
+ - bankAccountA（bankAccountクラスのインスタンス）を生成
+ - bankAccountB（bankAccountクラスのインスタンス）を生成
+ - bankAccountAに500（円）入金
+ - myAccountingApplicationが、bankAccountAとbankAccountBのbalanceの合計値を出力する(500)
+ - bankAccountBに500（円）入金
+ - myAccountingApplicationが、bankAccountAとbankAccountBのbalanceの合計値を出力する(1000)
+ 
+ ただし、BankAccountに対して処理を追記するのは良いが、削除してはいけないものとする。
+ それ以外の条件は問わない。
+ */
