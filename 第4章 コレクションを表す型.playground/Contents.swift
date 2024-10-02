@@ -6,6 +6,10 @@ import Foundation
 
 // 変数「numbers」の3番目の要素を取り出し、定数「thirdElement」に代入してください。
 
+// map関数を用いて配列numbersの要素を全て2倍にした配列「doubledNumbers」を作成してください。
+
+// filter関数を用いて配列numbersの要素のうち、奇数の要素のみが存在する配列「oddNumbers」を作成してください。
+
 // Dictionary<String, Int>型の変数「ages」を宣言し、キーが名前（name）、値が年齢(age)である辞書を作成してください。"John"が25歳、"Jane"が30歳である時、それらのデータをagesに代入してください。
 
 // 変数「ages」に新しいキー"Emily"とその値28を追加してください。
